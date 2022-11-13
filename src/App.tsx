@@ -2,6 +2,8 @@ import "./App.css";
 
 import React from "react";
 
+import Logo from "@/assets/react.svg";
+
 function App() {
   const aw = React.useMemo(
     () => ({
@@ -16,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <img />
+      <img src={Logo} />
     </div>
   );
 }
