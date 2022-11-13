@@ -1,5 +1,6 @@
 import "./App.css";
 
+import { CircularProgress } from "@chakra-ui/react";
 import React from "react";
 
 import Logo from "@/assets/react.svg";
@@ -19,6 +20,7 @@ function App() {
   return (
     <div className="App">
       <img src={Logo} />
+      <CircularProgress isIndeterminate value={80} />
     </div>
   );
 }
