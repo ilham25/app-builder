@@ -1,27 +1,11 @@
-import "./App.css";
-
-import { CircularProgress } from "@chakra-ui/react";
-import React from "react";
-
-import Logo from "@/assets/react.svg";
+import { Layout } from "./components";
+import { Toolbar } from "./features/toolbar";
 
 function App() {
-  const aw = React.useMemo(
-    () => ({
-      awe: "we"
-    }),
-    []
-  );
-
-  React.useEffect(() => {
-    console.log(aw, "aw");
-  }, [aw]);
-
   return (
-    <div className="App">
-      <img src={Logo} />
-      <CircularProgress isIndeterminate value={80} />
-    </div>
+    <Layout>
+      <Toolbar />
+    </Layout>
   );
 }
 
