@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Resizable, ResizeCallback } from "re-resizable";
+import { Enable, Resizable, ResizeCallback } from "re-resizable";
 import React from "react";
 
 import type { Widget } from "../types";
@@ -64,13 +64,34 @@ export const WidgetComponent = React.memo(function WidgetComponent({
     setDimension({ height: clientHeight, width: clientWidth });
   }, [ref]);
 
+  const enable: Enable = React.useMemo(() => {
+    const isEnable = true;
+    const axisArr: (keyof Enable)[] = [
+      "bottom",
+      "bottomLeft",
+      "bottomRight",
+      "left",
+      "right",
+      "top",
+      "topLeft",
+      "topRight"
+    ];
+    const axisObj: Enable = {};
+
+    axisArr.forEach((axis) => {
+      axisObj[axis] = isEnable;
+    });
+
+    return axisObj;
+  }, []);
+
   return (
     <Resizable
       defaultSize={dimension}
       size={dimension}
       onResizeStop={onResizeStop}
       onResizeStart={onResizeStart}
-      enable={{ top: true, bottom: true, left: true, right: true }}
+      enable={enable}
       style={
         isResizing
           ? { outline: "1px solid #63b3ed", outlineOffset: "1px", ...resizeWrapperStyle }

@@ -5,7 +5,7 @@ export const EditorLayout = React.memo(function EditorLayout({
   children
 }: React.PropsWithChildren) {
   return (
-    <Box flexGrow="1" height="full" padding="2" overflowY="auto" overflowX="hidden">
+    <Box flexGrow="1" height="full" padding="2" overflow="auto">
       {children}
     </Box>
   );
