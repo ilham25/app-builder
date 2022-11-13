@@ -9,7 +9,7 @@ export const Editor = React.memo(function Editor() {
       <WidgetComponent
         id="id"
         tag="article"
-        style={{ backgroundColor: "red", width: 100, height: 100 }}
+        style={{ backgroundColor: "white", width: 100, height: 100 }}
       />
     </Box>
   );
