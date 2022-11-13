@@ -1,15 +1,20 @@
-import { Box } from "@chakra-ui/react";
 import React from "react";
 
 import { WidgetComponent } from "@/features/widgets";
 
+import { EditorLayout } from "./Layout";
+
 export const Editor = React.memo(function Editor() {
   return (
-    <Box flexGrow="1" height="full" padding="2">
+    <EditorLayout>
       <WidgetComponent
         id="article1"
         tag="article"
-        style={{ backgroundColor: "white", width: 100, height: 100 }}
+        style={{
+          backgroundColor: "white",
+          width: 100,
+          height: 100
+        }}
       />
       <WidgetComponent id="text1" tag="p">
         ini paragraf
@@ -26,6 +31,6 @@ export const Editor = React.memo(function Editor() {
         }}>
         ini tombol
       </WidgetComponent>
-    </Box>
+    </EditorLayout>
   );
 });

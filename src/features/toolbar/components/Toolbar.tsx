@@ -1,7 +1,7 @@
 import { Divider, Flex } from "@chakra-ui/react";
 import React from "react";
 import { BiText } from "react-icons/bi";
-import { BsCursorFill, BsFillGridFill } from "react-icons/bs";
+import { BsCursorFill, BsFillGridFill, BsFillImageFill } from "react-icons/bs";
 import { MdAdsClick } from "react-icons/md";
 
 import { Brand } from "@/components";
@@ -25,6 +25,7 @@ export const Toolbar = React.memo(function Toolbar() {
         <ToolButton aria-label="Container" icon={<BsFillGridFill />} />
         <ToolButton aria-label="Text" icon={<BiText size={18} />} />
         <ToolButton aria-label="Button" icon={<MdAdsClick size={18} />} />
+        <ToolButton aria-label="Image" icon={<BsFillImageFill size={16} />} />
       </Flex>
     </Flex>
   );

@@ -15,20 +15,20 @@ export const WidgetComponent = React.memo(function WidgetComponent({
       outline-width: 1px;
       outline-style: solid;
       outline-color: #63b3ed;
-      outline-offset: 2px;
+      outline-offset: 1px;
     }
 
     &[aria-selected="true"] {
       outline-width: 1px;
       outline-style: solid;
       outline-color: #63b3ed;
-      outline-offset: 2px;
+      outline-offset: 1px;
     }
   `;
 
   return (
     <Widget
-      //  aria-selected="true"
+      // aria-selected="true"
       {...rest}>
       {children}
     </Widget>
