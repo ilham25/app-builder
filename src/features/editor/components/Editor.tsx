@@ -12,8 +12,8 @@ export const Editor = React.memo(function Editor() {
         tag="article"
         style={{
           backgroundColor: "white",
-          width: 100,
-          height: 100
+          height: 50,
+          width: 100
         }}
       />
       <WidgetComponent id="text1" tag="p">
